@@ -1,0 +1,22 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql://root:@localhost/datasciencehub",
+        "prod_uri":"mysql://root:@localhost/datasciencehub",
+        "linkedin_url":"https://www.linkedin.com/in/shyam-patel-427688114/",
+        "fb_url":"https://www.facebook.com/shyam.patel.9421",
+        "github_url":"https://github.com/shyam8898",
+        "blog_title":"Data Science Hub",
+        "blog_name":"Data Science",
+        "blog_tagline":"A Blog by Data Science Enthusiasts",
+        "gmail_user":"shyampatel801@gmail.com",
+        "gmail_password":"gmail_password",
+        "about":"Data Science Hub is proud to run a publication where independent authors who follow our rules and guidelines can publish their work, share their knowledge and expertise, and engage a wide audience on Medium. We love connecting ideas with readers, but we're unable to vet the accuracy of every contribution, so use your best judgment and seek professional advice before taking any action based on the content on this site.",
+        "no_of_posts":3,
+        "admin_user":"admin",
+        "admin_password":"admin",
+        "upload_location":"F:\\flaskapp\\static\\assets\\img"
+    }
+
+}

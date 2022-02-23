@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block body %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{url_for('static',filename='assets/img/datascience.jpg')}}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Admin Panel</h1>
+                            <span class="subheading">Manage your posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container">
+        	<div class="row">
+        		<div class="col-lg-8 col-md-10 mx-auto">
+                    <h3>Basic Actions</h3>
+                    <a href="/dashboard"><button class="btn btn-primary btn-sm"> Dashboard Home</button></a>
+                    <a href="/logout"><button class="btn btn-primary btn-sm"> Log Out</button></a><hr>
+        			<h3>Add/Edit Posts</h3>
+                    <form id="contactForm",action="/edit/{{sno}}", method="post">
+                                <div class="form-floating">
+                                    <input class="form-control" id="title" name='title' type="text" placeholder="Enter your name" value="{{post.title}}" required />
+                                    <label for="name">Title</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="tagline" name='tagline' type="text" placeholder="Enter your tagline" value="{{post.tagline}}" required />
+                                    <label for="email">Tagline</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="slug" name='slug' type="text" placeholder="Enter your phone slug" value="{{post.slug}}" required />
+                                    <label for="phone">Slug</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content" name='content' placeholder="Enter your content here..." style="height: 12rem" required>{{post.content}}</textarea>
+                                    <label for="message">Content</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="Upload" class="form-control" id="img_file" name='img_file' placeholder="Put Your Image Here" value="{{post.img_file}}" required>
+                                    <label for="message">Image File</label>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="submit" value="Submit" class="btn btn-primary rounded-0 py-2 px-4">
+                                        <span class="submitting"></span>
+                                    </div>
+                                </div>
+                            </form>
+        		</div>
+        	</div>
+        </div>
+
+{% endblock %}   
